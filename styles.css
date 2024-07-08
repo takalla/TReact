@@ -8,18 +8,23 @@
   color: #243e63;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 .container {
-    padding: 80px 0;
+  padding: 80px 24px;
 }
 
 .row {
   width: 100%;
   max-width: 1200px;
-  padding: 0 32px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 a {
@@ -40,25 +45,25 @@ button:hover {
 }
 
 h1 {
-    font-size: 48px;
-    font-weight: 900;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1.25;
 }
 
 h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #1a202c;
-    line-height: 1.25;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 4px;
 }
 
 p {
-    font-size: 16px;
+  font-size: 18px;
 }
 
 .purple-text {
-    color: #6415ff;
+  color: #6415ff;
 }
-
 
 /* 
 
@@ -68,6 +73,10 @@ NAVIGATION
 
 .nav {
   height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
 }
 
 .logo__wrap {
@@ -121,74 +130,186 @@ NAVIGATION
   transition: background-color 300ms ease;
 }
 
-
 /*
 
 HEADER
 
 */
+
+header {
+  position: relative;
+}
+
 .header__row {
-    align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-end;
 }
 
 .header__left-column {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 p.header {
-    margin: 32px 0;
-    line-height: 1.5;
+  margin: 32px 0;
+  line-height: 1.5;
 }
 
 .input__wrap {
-    position: relative;
+  position: relative;
+  width: 100%;
 }
 
 input {
-    color: rgb(226, 232, 240);
-    font-size: 100%;
-    font-weight: 500;
-    width: 100%;
-    padding: 20px 192px 20px 32px;
-    background-color: #ffffff;
-    border-radius: 9999px;
-    border: 2px solid rgb(226, 232, 240);
+  font-size: 100%;
+  font-weight: 500;
+  width: 100%;
+  padding: 20px 192px 20px 32px;
+  background-color: #ffffff;
+  border-radius: 9999px;
+  border: 2px solid rgb(226, 232, 240);
+  transition: all 300ms ease;
+}
+
+input::placeholder {
+  color: rgb(226, 232, 240);
+}
+
+input:hover {
+  border-color: rgb(160, 174, 192);
+}
+
+input:focus {
+  border-color: rgb(100, 21, 255);
+  outline: transparent solid 2px;
+  outline-offset: 2px;
 }
 
 button.header__button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: 8px 8px 8px 0;
-    padding: 16px 0;
-    width: 160px;
-    font-weight: 700;
-    font-size: 100%;
-    line-height: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 8px 8px 8px 0;
+  padding: 16px 0;
+  width: 160px;
+  font-weight: 700;
+  font-size: 100%;
+  line-height: 16px;
 }
 
 .customers__wrap {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
 .customers {
-    font-size: 12px;
-    color: #a0aec0;
-    font-weight: 700;
+  font-size: 12px;
+  color: #a0aec0;
+  font-weight: 700;
 }
 
 .customers__img {
-    max-width: 100%;
-    opacity: 0.5;
-    margin-top: 16px;
-    padding-right: 64px;
+  max-width: 100%;
+  opacity: 0.5;
+  margin-top: 16px;
+  padding-right: 64px;
 }
 
 .header__img {
-    width: 60%;
-    max-width: 512px;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 24px;
+}
+
+.header__blob {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+  left: 0;
+  bottom: 0;
+  z-index: -10;
+  transform: translateX(-55%);
+  opacity: 0.05;
+}
+
+/*
+
+FEATURES
+
+*/
+
+#features {
+  position: relative;
+}
+
+.features__title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#features h2 {
+  text-align: center;
+}
+
+.features__para {
+  font-weight: 500;
+  line-height: 1.625;
+  max-width: 576px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service {
+  display: flex;
+  width: calc(100% / 3);
+  padding: 0px 16px;
+  margin: 32px 0;
+}
+
+.features__img--container {
+  width: 66px;
+  height: 66px;
+  border: 1px solid rgb(226, 232, 240);
+  border-radius: 50px;
+  padding: 20px;
+  text-align: center;
+}
+
+.service__description {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0 0 16px;
+}
+
+.title {
+  color: #243e63;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.service__description--para {
+  color: #7c8ba1;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.features__blob {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+  right: 0;
+  bottom: 0;
+  transform: translateX(128px) translateY(192px);
+  opacity: 0.25;
 }
