@@ -258,11 +258,12 @@ FEATURES
 }
 
 .features__para {
+  color: #7c8ba1;
   font-weight: 500;
   line-height: 1.625;
-  max-width: 576px;
+  max-width: 600px;
   text-align: center;
-  margin-top: 16px;
+  margin: 16px auto 32px auto;
 }
 
 .services {
@@ -310,6 +311,6 @@ FEATURES
   height: 256px;
   right: 0;
   bottom: 0;
-  transform: translateX(128px) translateY(192px);
+  transform: translateX(128px) translateY(50px);
   opacity: 0.25;
 }
