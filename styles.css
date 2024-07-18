@@ -143,7 +143,6 @@ header {
 .header__row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   align-items: flex-end;
 }
 
@@ -314,3 +313,49 @@ FEATURES
   transform: translateX(128px) translateY(50px);
   opacity: 0.25;
 }
+
+/* 
+
+QUALITY WORK
+
+*/
+
+.work__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.work__left-column {
+  width: 50%;
+  margin-right: 32px;
+}
+
+.work__h2 {
+  margin: 16px 0;
+}
+
+.work__button {
+  margin-top: 32px;
+}
+
+.work__img--wrapper {
+  position: relative;
+  width: 50%;
+  margin-left: 32px;
+}
+
+.work__img {
+  width: 100%;
+  border: 1px solid rgb(226, 232, 240);
+  border-radius: 4px;
+}
+
+.work__dot-grid {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: -35px;
+  right: -40px;
+  z-index: -1;
+px}
