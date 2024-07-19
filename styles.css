@@ -27,6 +27,12 @@ body {
   margin: 0 auto;
 }
 
+.two-column__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 a {
   text-decoration: none;
 }
@@ -331,21 +337,14 @@ QUALITY WORK
 
 */
 
-.work__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .work__left-column {
   width: 50%;
-  margin-right: 32px;
+  margin-right: 64px;
 }
 
 .work__img--wrapper {
   position: relative;
   width: 50%;
-  margin-left: 32px;
 }
 
 .work__img {
@@ -368,3 +367,59 @@ QUALITY WORK
 STEPS
 
 */
+
+.steps__img--wrapper {
+  position: relative;
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.steps__img {
+  width: 100%;
+ }
+
+.steps__dot-grid {
+  position: absolute;
+  opacity: 0.15;
+  width: 160px;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.steps__right-column {
+  width: 50%;
+  margin-left: 64px;
+}
+
+.step {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 32px;
+}
+
+.step__number {
+  color: #cbd5e0;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.step__description {
+  margin-left: 24px;
+}
+
+.step__title {
+  color: #243e63;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.step__para {
+  color: #718096;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2;
+  margin-top: 12px;
+  min-width: 320px;
+}
