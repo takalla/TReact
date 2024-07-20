@@ -65,6 +65,12 @@ p {
   color: #6415ff;
 }
 
+.left-column__text {
+  width: 50%;
+  margin-right: 64px;
+  padding: 32px 0;
+}
+
 .section__title {
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -97,7 +103,6 @@ p {
 .align-center {
   text-align: center;
 }
-
 
 /* 
 
@@ -176,15 +181,13 @@ header {
 
 .header__row {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   align-items: flex-end;
 }
 
 .header__left-column {
   width: 40%;
-  display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 p.header {
@@ -337,11 +340,6 @@ QUALITY WORK
 
 */
 
-.work__left-column {
-  width: 50%;
-  margin-right: 64px;
-}
-
 .work__img--wrapper {
   position: relative;
   width: 50%;
@@ -376,7 +374,7 @@ STEPS
 
 .steps__img {
   width: 100%;
- }
+}
 
 .steps__dot-grid {
   position: absolute;
@@ -422,4 +420,57 @@ STEPS
   line-height: 2;
   margin-top: 12px;
   min-width: 320px;
+}
+
+/*
+
+VALUES
+
+*/
+
+.values {
+  display: flex;
+  margin-top: 32px;
+}
+
+.value:not(:last-child) {
+  margin-right: 32px;
+}
+
+.value__title--wrapper {
+  display: flex;
+}
+
+.value__icon {
+  padding: 8px;
+  border-radius: 50px;
+  overflow: visible;
+}
+
+.icon--affordable {
+  background-color: #9ae6b4;
+}
+
+.icon--Professionalism {
+  background-color: #feb2b2;
+}
+
+.value__title {
+  color: #243e63;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 12px;
+}
+
+.value__para {
+  color: #718096;
+  margin-top: 16px;
+}
+
+.values__img--wrapper {
+  width: 50%;
+}
+
+.values__img {
+  width: 100%;
 }
