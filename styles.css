@@ -50,6 +50,12 @@ button:hover {
   background-color: rgb(80, 17, 204);
 }
 
+.no-cursor {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='35' height='42' viewport='0 0 100 100' style='fill:black;font-size:21px;'><text y='50%'>👻</text></svg>")
+      16 0,
+    auto; /*!emojicursor.app*/
+}
+
 h1 {
   font-size: 48px;
   font-weight: 700;
@@ -371,7 +377,6 @@ STEPS
 .steps__img--wrapper {
   position: relative;
   width: 50%;
-  flex-shrink: 0;
 }
 
 .steps__img {
@@ -490,17 +495,23 @@ PRICING
 */
 
 .plans {
-  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.plan--wrapper {
+  width: calc(100% / 3);
+  max-width: 384px;
+  margin-top: 64px;
+  padding: 0 16px;
 }
 
 .plan {
   position: relative;
-  width: calc(100% / 3);
-  max-width: 384px;
   text-align: center;
-  margin-top: 64px;
   padding: 8px 32px 0 32px;
   border-radius: 8px;
   background-color: rgb(255, 255, 255);
@@ -513,7 +524,6 @@ PRICING
     rgb(76, 81, 191) 0%,
     rgb(102, 126, 234) 100%
   );
-  margin: 64px 32px 0 32px;
 }
 
 .plan__highlight {
@@ -593,7 +603,7 @@ PRICING
 }
 
 .plan__action {
-  padding: 32px 64px;
+  padding: 32px 0px;
 }
 
 .business-color1 {
@@ -612,6 +622,7 @@ PRICING
   font-size: 14px;
   font-weight: 700;
   width: 100%;
+  max-width: 192px;
   color: #f7fafc;
   letter-spacing: 0.8px;
   padding: 16px 32px;
@@ -652,6 +663,6 @@ PRICING
   opacity: 0.25;
   left: 0px;
   bottom: 0px;
-  transform: translateY(50%) translateX(-50%);
+  transform: translateY(50%) translateX(-45%);
   z-index: -1;
 }

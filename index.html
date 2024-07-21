@@ -20,8 +20,8 @@
           <a href="#" class="nav__link">Pricing</a>
           <a href="#" class="nav__link">Contact Us</a>
           <a href="#" class="nav__link nav__link--left-margin">Login</a>
-          <a href="#">
-            <button class="nav__link--button">Sign Up</button>
+          <a >
+            <button class="nav__link--button no-cursor">Sign Up</button>
           </a>
         </div>
       </div>
@@ -40,7 +40,7 @@
             </p>
             <div class="input__wrap">
               <input type="email" placeholder="Your E-mail Address" />
-              <button class="header__button">Get Started</button>
+              <button class="header__button no-cursor">Get Started</button>
             </div>
             <div class="customers__wrap">
               <p class="customers">OUR TRUSTED CUSTOMERS</p>
@@ -164,8 +164,8 @@
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <a href="#">
-              <button class="section__button">Learn More</button>
+            <a >
+              <button class="section__button no-cursor">Learn More</button>
             </a>
           </div>
           <div class="work__img--wrapper">
@@ -274,8 +274,8 @@
                 </div>
               </div>
             </div>
-            <a href="#">
-              <button class="section__button">Learn More</button>
+            <a >
+              <button class="section__button no-cursor">Learn More</button>
             </a>
           </div>
           <div class="values__img--wrapper">
@@ -298,68 +298,82 @@
           </p>
 
           <div class="plans">
-            <div class="plan">
-              <div class="plan__highlight personal"></div>
-              <div class="plan__header">
-                <div class="plan__name">PERSONAL</div>
-                <div class="plan__price">$17.99</div>
-                <div class="plan__duration">MONTHLY</div>
-              </div>
-              <div class="plan__features">
-                <div class="plan__main-feature">For Individuals</div>
-                <div class="plan__feature">30 Templates</div>
-                <div class="plan__feature">7 Landing Pages</div>
-                <div class="plan__feature">12 Internal Pages</div>
-                <div class="plan__feature">Basic Assistance</div>
-              </div>
-              <div class="plan__action">
-                <a href="#">
-                  <button class="plan__button personal">BUY NOW</button>
-                </a>
-              </div>
-            </div>
-
-            <div class="plan business">
-              <div class="plan__header">
-                <div class="plan__name business-color1">BUSINESS</div>
-                <div class="plan__price business-color1">$37.99</div>
-                <div class="plan__duration business-color3">MONTHLY</div>
-              </div>
-              <div class="plan__features business">
-                <div class="plan__main-feature business-color1">For Small Businesses</div>
-                <div class="plan__feature business-color2">80 Templates</div>
-                <div class="plan__feature business-color2">15 Landing Pages</div>
-                <div class="plan__feature business-color2">22 Internal Pages</div>
-                <div class="plan__feature business-color2">Priority Assistance</div>
-              </div>
-              <div class="plan__action">
-                <a href="#">
-                  <button class="plan__button business">BUY NOW</button>
-                </a>
+            <div class="plan--wrapper">
+              <div class="plan">
+                <div class="plan__highlight personal"></div>
+                <div class="plan__header">
+                  <div class="plan__name">PERSONAL</div>
+                  <div class="plan__price">$17.99</div>
+                  <div class="plan__duration">MONTHLY</div>
+                </div>
+                <div class="plan__features">
+                  <div class="plan__main-feature">For Individuals</div>
+                  <div class="plan__feature">30 Templates</div>
+                  <div class="plan__feature">7 Landing Pages</div>
+                  <div class="plan__feature">12 Internal Pages</div>
+                  <div class="plan__feature">Basic Assistance</div>
+                </div>
+                <div class="plan__action">
+                  <a >
+                    <button class="plan__button personal no-cursor">BUY NOW</button>
+                  </a>
+                </div>
               </div>
             </div>
 
-            <div class="plan">
-              <div class="plan__highlight enterprise"></div>
-              <div class="plan__header">
-                <div class="plan__name">ENTERPRISE</div>
-                <div class="plan__price">$57.99</div>
-                <div class="plan__duration">MONTHLY</div>
-              </div>
-              <div class="plan__features">
-                <div class="plan__main-feature">For Large Companies</div>
-                <div class="plan__feature">90 Templates</div>
-                <div class="plan__feature">27 Landing Pages</div>
-                <div class="plan__feature">37 Internal Pages</div>
-                <div class="plan__feature">Personal Assistance</div>
-              </div>
-              <div class="plan__action">
-                <a href="#">
-                  <button class="plan__button enterprise">BUY NOW</button>
-                </a>
+            <div class="plan--wrapper business">
+              <div class="plan business">
+                <div class="plan__header">
+                  <div class="plan__name business-color1">BUSINESS</div>
+                  <div class="plan__price business-color1">$37.99</div>
+                  <div class="plan__duration business-color3">MONTHLY</div>
+                </div>
+                <div class="plan__features business">
+                  <div class="plan__main-feature business-color1">
+                    For Small Businesses
+                  </div>
+                  <div class="plan__feature business-color2">80 Templates</div>
+                  <div class="plan__feature business-color2">
+                    15 Landing Pages
+                  </div>
+                  <div class="plan__feature business-color2">
+                    22 Internal Pages
+                  </div>
+                  <div class="plan__feature business-color2">
+                    Priority Assistance
+                  </div>
+                </div>
+                <div class="plan__action">
+                  <a >
+                    <button class="plan__button business no-cursor">BUY NOW</button>
+                  </a>
+                </div>
               </div>
             </div>
-            <img src="./assets/plan__blob.svg" alt="" class="plan__blob">
+
+            <div class="plan--wrapper">
+              <div class="plan">
+                <div class="plan__highlight enterprise"></div>
+                <div class="plan__header">
+                  <div class="plan__name">ENTERPRISE</div>
+                  <div class="plan__price">$57.99</div>
+                  <div class="plan__duration">MONTHLY</div>
+                </div>
+                <div class="plan__features">
+                  <div class="plan__main-feature">For Large Companies</div>
+                  <div class="plan__feature">90 Templates</div>
+                  <div class="plan__feature">27 Landing Pages</div>
+                  <div class="plan__feature">37 Internal Pages</div>
+                  <div class="plan__feature">Personal Assistance</div>
+                </div>
+                <div class="plan__action">
+                  <a >
+                    <button class="plan__button enterprise no-cursor">BUY NOW</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="./assets/plan__blob.svg" alt="" class="plan__blob" />
           </div>
         </div>
       </div>
