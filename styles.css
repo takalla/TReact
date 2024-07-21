@@ -249,7 +249,7 @@ button.header__button {
 }
 
 .customers__img {
-  max-width: 100%;
+  width: 100%;
   opacity: 0.5;
   margin-top: 16px;
   padding-right: 64px;
@@ -298,12 +298,14 @@ FEATURES
 }
 
 .features__img--container {
-  width: 66px;
-  height: 66px;
+  width: 60px;
+  height: 60px;
   border: 1px solid rgb(226, 232, 240);
   border-radius: 50px;
   padding: 20px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service__description {
@@ -439,11 +441,17 @@ VALUES
 
 .value__title--wrapper {
   display: flex;
+  align-items: center;
 }
 
 .value__icon {
+  width: 36px;
+  height: 36px;
   padding: 8px;
   border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: visible;
 }
 
@@ -473,4 +481,177 @@ VALUES
 
 .values__img {
   width: 100%;
+}
+
+/*
+
+PRICING
+
+*/
+
+.plans {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plan {
+  position: relative;
+  width: calc(100% / 3);
+  max-width: 384px;
+  text-align: center;
+  margin-top: 64px;
+  padding: 8px 32px 0 32px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.plan.business {
+  background-image: linear-gradient(
+    135deg,
+    rgb(76, 81, 191) 0%,
+    rgb(102, 126, 234) 100%
+  );
+  margin: 64px 32px 0 32px;
+}
+
+.plan__highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.plan__highlight.personal {
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+}
+
+.plan__highlight.enterprise {
+  background: linear-gradient(
+    115deg,
+    rgb(245, 101, 101) 0%,
+    rgb(254, 178, 178) 100%
+  );
+}
+
+.plan__header {
+  padding: 32px 0;
+  line-height: 1.625;
+}
+
+.plan__name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.plan__price {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 4px 0;
+}
+
+.plan__duration {
+  font-weight: 700;
+  color: #a0aec0;
+  letter-spacing: 1.5px;
+}
+
+.plan__features {
+  padding: 32px 32px;
+  border-style: solid;
+  border-color: rgb(226, 232, 240);
+  border-width: 0px;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  margin: 0 -32px;
+}
+
+.plan__features.business {
+  border-color: rgb(102, 126, 234);
+}
+
+.plan__main-feature {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.plan__feature {
+  font-weight: 500;
+  color: #718096;
+  margin-top: 20px;
+}
+
+.plan__action {
+  padding: 32px 64px;
+}
+
+.business-color1 {
+  color: #ffffff;
+}
+
+.business-color2 {
+  color: #f7fafc;
+}
+
+.business-color3 {
+  color: #edf2f7;
+}
+
+.plan__button {
+  font-size: 14px;
+  font-weight: 700;
+  width: 100%;
+  color: #f7fafc;
+  letter-spacing: 0.8px;
+  padding: 16px 32px;
+  transition: all 300ms ease;
+}
+
+.plan__button.personal {
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+}
+
+.plan__button.business {
+  color: #6415ff;
+  background-color: rgb(247, 250, 252);
+}
+
+.plan__button:hover {
+  transform: translateX(1px) translateY(-1px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.plan__button.enterprise {
+  background: linear-gradient(
+    115deg,
+    rgb(245, 101, 101) 0%,
+    rgb(254, 178, 178) 100%
+  );
+}
+
+.plan__blob {
+  position: absolute;
+  height: 256px;
+  width: 256px;
+  opacity: 0.25;
+  left: 0px;
+  bottom: 0px;
+  transform: translateY(50%) translateX(-50%);
+  z-index: -1;
 }
