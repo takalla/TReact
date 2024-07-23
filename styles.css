@@ -43,7 +43,6 @@ button {
   background-color: #6415ff;
   border-radius: 9999px;
   padding: 12px 32px;
-  cursor: pointer;
 }
 
 button:hover {
@@ -51,7 +50,7 @@ button:hover {
 }
 
 .no-cursor {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='35' height='42' viewport='0 0 100 100' style='fill:black;font-size:21px;'><text y='50%'>👻</text></svg>")
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='30' height='37' viewport='0 0 100 100' style='fill:black;font-size:16px;'><text y='50%'>👻</text></svg>")
       16 0,
     auto; /*!emojicursor.app*/
 }
@@ -665,4 +664,113 @@ PRICING
   bottom: 0px;
   transform: translateY(50%) translateX(-45%);
   z-index: -1;
+}
+
+/*
+
+TESTIMONIALS
+
+*/
+
+.testimonials {
+  display: flex;
+}
+
+.hidden {
+  content-visibility: hidden;
+}
+
+.testimonials__img--wrapper {
+  width: 50%;
+}
+
+.testimonials__img {
+  width: 100%;
+}
+
+.testimonials__right-column {
+  width: 50%;
+  margin-left: 64px;
+}
+
+.testimonials {
+  margin-top: 40px;
+}
+
+.fa-star {
+  color: #fabf2a;
+}
+
+.testimonial__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 16px 0;
+}
+
+.testimonial__para {
+  color: #4a5568;
+  font-weight: 500;
+  line-height: 1.625;
+}
+
+.testimonial__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.testimonial__footer--client {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial__img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.testimonial__client {
+  margin-left: 24px;
+  text-align: left;
+}
+
+.testimonial__client--name {
+  font-size: 20px;
+  color: #243e63;
+  font-weight: 700;
+}
+
+.testimonial__client--title {
+  color: #7c8ba1;
+  font-weight: 500;
+}
+
+.testimonial__footer--control {
+  display: flex;
+}
+
+.testimonial__control {
+  background-color: #edf2f7;
+  display: flex;
+  margin: 0 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.testimonial__control:hover {
+  background-color: rgb(226, 232, 240);
+}
+
+.fa-arrow-left,
+.fa-arrow-right {
+  color: #6415ff;
+  font-size: 16px;
+}
+
+.testimonial__divider {
+  border-right: 1px solid rgb(226, 232, 240);
+  margin: 12px 0;
 }
