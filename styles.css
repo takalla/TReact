@@ -197,6 +197,10 @@ MENU
   transition: background-color 300ms ease;
 }
 
+.menu__link--btn:hover {
+  color: #6315ff;
+}
+
 .btn__menu--close {
   position: absolute;
   top: 24px;
@@ -263,10 +267,15 @@ NAVIGATION
   margin-left: 48px;
 }
 
+
 .nav__link--button {
   font-size: 14px;
   font-weight: 600;
   transition: background-color 300ms ease;
+}
+
+.nav__link--button:hover {
+  color: #6315ff;
 }
 
 /*
@@ -446,6 +455,7 @@ QUALITY WORK
 .work__img--wrapper {
   position: relative;
   width: 50%;
+  margin: 0 56px;
 }
 
 .work__img {
@@ -481,8 +491,8 @@ STEPS
 .steps__dot-grid {
   position: absolute;
   opacity: 0.15;
-  width: 160px;
-  height: 160px;
+  width: 80px;
+  height: 80px;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%) translateY(47%);
@@ -508,6 +518,7 @@ STEPS
 
 .step__description {
   margin-left: 24px;
+  max-width: 320px;
 }
 
 .step__title {
@@ -522,7 +533,6 @@ STEPS
   font-weight: 500;
   line-height: 2;
   margin-top: 12px;
-  max-width: 320px;
 }
 
 /*
@@ -760,7 +770,7 @@ PRICING
   opacity: 0.25;
   left: 0px;
   bottom: 0px;
-  transform: translateY(50%) translateX(-50%);
+  transform: translateY(50%) translateX(-43%);
   z-index: -1;
 }
 
@@ -968,7 +978,7 @@ STARTED
 }
 
 .get-started__heading {
-  width: 50%;
+  width: 100%;
   max-width: 512px;
   color: #f7fafc;
   font-size: 30px;
@@ -979,7 +989,7 @@ STARTED
 .get-started__button--wrapper {
   display: flex;
   justify-content: flex-end;
-  width: 50%;
+  width: 100%;
   max-width: 512px;
 }
 
@@ -1053,7 +1063,7 @@ FOOTER
 .footer__container {
   position: relative;
   background-color: #6315ff;
-  padding: calc(80px + 20px) 24px;
+  padding: calc(64px + 20px) 32px;
   z-index: 1;
 }
 
@@ -1061,6 +1071,7 @@ FOOTER
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer__link--title {
@@ -1080,6 +1091,7 @@ li:not(.footer__link--title) {
 .footer__link {
   color: #f7fafc;
   font-size: 14px;
+  font-weight: 500;
   padding-bottom: 4px;
   border-bottom: 2px solid transparent;
   transition: border-color 300ms ease;
@@ -1194,6 +1206,12 @@ Resolutions
 
 */
 
+/* 
+
+1024px 
+
+*/
+
 @media (max-width: 1024px) {
 
   h1 {
@@ -1283,13 +1301,6 @@ Resolutions
     padding: 32px 8px;
   }
 
-  /* STEPS */
-
-  .steps__dot-grid {
-    width: 80px;
-    height: 80px;
-  }
-
   /* VALUES */
 
   #values .section__para {
@@ -1298,12 +1309,12 @@ Resolutions
 
   .values {
     flex-direction: column;
+    max-width: 320px;
     margin-top: 0;
   }
 
   .value {
     margin-top: 40px;
-    max-width: 320px;
   }
 
  #values .section__button {
@@ -1347,10 +1358,11 @@ Resolutions
 
 }
 
-/*
-*
-*
-*
+
+/* 
+
+768px 
+
 */
 
 @media (max-width: 768px) {
@@ -1358,13 +1370,140 @@ Resolutions
   .two-column__row {
     flex-direction: column;
   }
+
+  .left-column__text {
+    margin-right: 0;
+    width: 100%;
+    max-width: 448px;
+    text-align: center;
+    margin-top: 64px;
+  }
+  
+  /* QUALITY WORK */
+  
+  #work .row {
+    flex-direction: column-reverse;
+  }
+  
+  .work__img--wrapper {
+    width: 100%;
+    max-width: 448px;
+  }
+  
+  /* STEPS*/
+  
+  .steps__img--wrapper {
+    width: 100%;
+    max-width: 448px;
+  }
+  
+  .steps__right-column {
+    margin-left: 0;
+    width: 100%;
+    max-width: 448px;
+    text-align: center;
+    margin-top: 64px;
+  }
+  
+  .step {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .step__description {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+
+  /* VALUES */
+
+  #values .row {
+    flex-direction: column-reverse;
+  }
+
+  .values__img--wrapper {
+    width: 100%;
+    max-width: 448px;
+  }
+
+  .values {
+    margin: 0 auto;
+  }
+
+  .value:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .value__title--wrapper {
+    justify-content: center;
+  }
+
+  /* TESTIMONIALS */
+
+  .testimonials__img--wrapper {
+    width: 100%;
+    max-width: 448px;
+  }
+
+  .testimonials__right-column {
+    margin-left: 0;
+    width: 100%;
+    max-width: 448px;
+    text-align: center;
+    margin-top: 64px;
+  }
+
+  /* FAQS */ 
+
+  .question--text {
+    font-size: 16px;
+  }
+
+  .answer {
+    font-size: 12px;
+  }
+
+  /* FOOTER */ 
+
+  .footer__links--columns {
+    justify-content: flex-start;
+    margin-top: -48px;
+  }
+
+  .footer__links {
+    width: calc(100%/3);
+    margin-top: 48px;
+  }
+
+  .footer__info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__copyright {
+    margin: 32px;
+  }
 }
 
-/*
-*
-*
-*
+
+/* 
+
+550px 
+
 */
 
 @media (max-width: 550px) {
+
 }
+
+
+
+/*
+Things to finish:
+-Put the transition on the fly in hamburger menu
+-Adjust website for the 550px resolution
+-Submit project in FES for feedback
+
+Website for reference:
+https://cutzudev.github.io/treact_example/#
+*/
