@@ -89,6 +89,7 @@ p {
   font-size: 48px;
   font-weight: 900;
   letter-spacing: 0.6px;
+  line-height: 1.5;
   margin: 16px 0;
 }
 
@@ -153,17 +154,14 @@ MENU
   align-items: center;
   opacity: 0;
   visibility: hidden;
+  transform: translateX(300%);
   transition: all 300ms ease;
 }
 
 .menu--open .menu__backdrop {
   visibility: visible;
   opacity: 1;
-}
-
-.menu--open {
-  max-height: 100vh;
-  overflow-y: hidden;
+  transform: translateX(0);
 }
 
 .menu__links {
@@ -180,7 +178,6 @@ MENU
   margin: 8px 0;
   padding-bottom: 4px;
   border-bottom: 2px solid transparent;
-  transition: all 300ms ease;
 }
 
 .menu__link:hover {
@@ -316,18 +313,20 @@ input {
   background-color: #ffffff;
   border-radius: 9999px;
   border: 2px solid #e2e8f0;
-  transition: all 300ms ease;
+  transition: border-color 300ms;
 }
 
 input::placeholder {
   color: #e2e8f0;
+  font-weight: 500;
 }
 
 input:hover {
   border-color: #a0aec0;
 }
 
-input:focus {
+input:focus,
+input:active {
   border-color: #6415ff;
   outline: transparent solid 2px;
   outline-offset: 2px;
@@ -354,6 +353,7 @@ button.header__button {
   font-size: 12px;
   color: #a0aec0;
   font-weight: 700;
+  letter-spacing: 0.05rem;
 }
 
 .customers__img {
@@ -619,10 +619,10 @@ PRICING
 .plan {
   position: relative;
   text-align: center;
-  padding: 8px 32px 0 32px;
   border-radius: 8px;
   background-color: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
 
 .plan.business {
@@ -710,7 +710,7 @@ PRICING
 }
 
 .plan__action {
-  padding: 32px 0px;
+  padding: 32px 48px;
 }
 
 .business-color1 {
@@ -1331,6 +1331,10 @@ Resolutions
     width: 100%;
   }
 
+  .plan__button {
+    max-width: none;
+  }
+
   /* TESTIMONIALS */
 
   .testimonials__img--wrapper {
@@ -1494,16 +1498,132 @@ Resolutions
 
 @media (max-width: 550px) {
 
+  .section__header {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .section__header.align-center {
+    font-size: 36px;
+  }
+
+  .section__para {
+    font-size: 14px;
+  }
+
+    /* HEADER */
+
+  .input__wrap {
+    flex-direction: column;
+  }
+
+  input {
+    padding: 16px 32px;
+    line-height: 1.5;
+  }
+
+  button.header__button {
+    position: static;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  /* FEATURES */
+
+  .service {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .service__description {
+    margin: 16px 0 0;
+  }
+
+  /* PRICING */
+
+  .plan__price {
+    font-size: 36px;
+  }
+
+  /* TESTIMONIALS */
+
+  .testimonial__footer {
+    flex-direction: column;
+  }
+
+  .testimonial__footer--client {
+    flex-direction: column;
+  }
+
+  .testimonial__client {
+    margin: 8px 0 32px 0;
+  }
+
+   /* FAQS */ 
+
+   .question--text {
+    font-size: 12px;
+  }
+
+  .answer {
+    font-size: 10px;
+  }
+
+  .fa-angle-down {
+    font-size: 14px;
+  }
+
+  /* GET STARTED */ 
+
+  .get-started__heading {
+    font-size: 24px;
+  }
+
+  .get-started__button--wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .get-started__button--start {
+    font-size: 14px;
+    margin-right: 0;
+    padding: 12px 24px;
+    line-height: 1.5;
+  }
+  
+  .get-started__button--contact {
+    font-size: 14px;
+    margin-top: 16px;
+    padding: 12px 24px;
+    line-height: 1.5;
+  }
+
+  /* FOOTER */ 
+
+  .footer__links--columns {
+    justify-content: center;
+  }
+
+  .footer__links {
+    width: auto;
+    padding: 0 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__copyright {
+    font-size: 14px;
+  }
 }
 
 
 
 /*
-Things to finish:
--Put the transition on the fly in hamburger menu
--Adjust website for the 550px resolution
--Submit project in FES for feedback
-
 Website for reference:
 https://cutzudev.github.io/treact_example/#
 */
